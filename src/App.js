@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const Lista_Planets = ({ image, name}) => {
+const List_Planets = ({ image, name}) => {
   return (
     <li className="planets">
         <img className="main-image" src={image} />
@@ -13,8 +13,8 @@ const Lista_Planets = ({ image, name}) => {
 
 const App = ({ planets }) => {
   
-    const listaComponent = planets.map((item, index) => {
-      return <Lista_Planets
+    const listComponent = planets.map((item, index) => {
+      return <List_Planets
         key={index}
         image={item.image}
         name={item.name}
@@ -24,7 +24,7 @@ const App = ({ planets }) => {
     return (<section id="content">
       <div>
         <ul className="k-widget k-listview">
-          {listaComponent}
+          {listComponent}
         </ul>
       </div>
     </section>)
