@@ -7,12 +7,12 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="white">Exoplanet Explorer</h1>
+          <p>Learn more about planets around other stars</p>
+          <button>Search</button>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h3>query: earth-like planets</h3>
+        <div className="div">Nombre de planetas</div>
       </div>
     );
   }
