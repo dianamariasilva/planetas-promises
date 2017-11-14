@@ -2,20 +2,32 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="white">Exoplanet Explorer</h1>
-          <p>Learn more about planets around other stars</p>
-          <button>Search</button>
-        </header>
-        <h3>query: earth-like planets</h3>
-        <div className="div">Nombre de planetas</div>
-      </div>
-    );
-  }
+const Lista_Planets = ({ image, name}) => {
+  return (
+    <li className="planets">
+        <img className="main-image" src={image} />
+        <strong>{name}</strong>
+    </li>
+  );
 }
+
+const App = ({ planets }) => {
+  
+    const listaComponent = planets.map((item, index) => {
+      return <Lista_Planets
+        key={index}
+        image={item.image}
+        price={item.price}
+        index={index}
+      />
+    })
+    return (<section id="content">
+      <div>
+        <ul className="k-widget k-listview">
+          {listaComponent}
+        </ul>
+      </div>
+    </section>)
+  }
 
 export default App;
