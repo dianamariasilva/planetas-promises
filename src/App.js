@@ -17,7 +17,7 @@ const App = ({ planets }) => {
       return <Lista_Planets
         key={index}
         image={item.image}
-        price={item.price}
+        name={item.name}
         index={index}
       />
     })
